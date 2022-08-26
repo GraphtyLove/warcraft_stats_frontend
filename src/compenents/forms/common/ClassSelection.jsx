@@ -2,10 +2,7 @@ import React, {useMemo, useState} from 'react';
 import SelectionInput from "../inputs/SelectionInput";
 import {CLASSES_AND_SPECS} from "../../../constants";
 
-const ClassSelection = () => {
-
-    const [characterClass, setCharacterClass] = useState("Shaman");
-    const [spec, setSpec] = useState("Restoration");
+const ClassSelection = ({characterClass, setCharacterClass, spec, setSpec}) => {
 
     const classList = useMemo(() => {
         console.log("Compute class list")

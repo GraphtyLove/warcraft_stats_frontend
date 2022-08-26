@@ -1,13 +1,10 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 import SelectionInput from "../inputs/SelectionInput";
 import {RAIDS_AND_BOSSES} from "../../../constants";
 
-const RaidSelection = () => {
+const RaidSelection = ({raid, setRaid,boss, setBoss}) => {
 
-    const [raid, setRaid] = useState("Sanctum Of Domination");
-    const [boss, setBoss] = useState("The Tarragrue");
-
-    const raidList = useMemo(() => {
+        const raidList = useMemo(() => {
         const filteredList = []
         for (const classMap of Object.entries(RAIDS_AND_BOSSES)) {
             filteredList.push(classMap[0])
