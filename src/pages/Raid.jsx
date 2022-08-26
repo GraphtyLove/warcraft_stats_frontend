@@ -1,9 +1,11 @@
 import React from 'react';
+import RaidForm from "../compenents/forms/RaidForm";
+
 
 const Raid = () => {
     return (
         <div>
-            Raid
+            <RaidForm />
         </div>
     );
 };
