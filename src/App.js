@@ -27,7 +27,7 @@ function App() {
         </main>
 
         <footer className="font-light mt-auto py-3">
-          <i>Develop with ❤️ by GraphtyLove</i>
+          <i>Developed with ❤️ by GraphtyLove</i>
         </footer>
 
     </div>

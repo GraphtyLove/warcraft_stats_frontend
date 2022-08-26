@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Warcraft Stats",
+  "name": "Get the best players' stats!",
   "icons": [
     {
       "src": "favicon.ico",
