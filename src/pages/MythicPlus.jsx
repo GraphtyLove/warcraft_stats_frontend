@@ -12,7 +12,7 @@ const MythicPlus = () => {
 
     const loadLeaderboard = async () => {
         console.log("Start fetching MM+...")
-        setLeaderboard(true)
+        setLeaderboardLoading(true)
         try {
             const response = await fetch(`${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=60`, {
                 method: "GET",
