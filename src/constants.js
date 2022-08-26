@@ -1,3 +1,5 @@
+export const BACKEND_URL = "http://localhost:8000"
+
 export const CLASSES_AND_SPECS = {
     "DeathKnight": [
         "Unholy",

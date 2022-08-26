@@ -2,7 +2,7 @@ import React from 'react';
 
 const SelectionInput = ({ name, options, value, setter }) => {
     return (
-        <label class="flex flex-col items-center mx-5">
+        <label className="flex flex-col items-center mx-5">
             <span className=" w-40  block text-sm font-medium text-slate-700">{name}</span>
             <select
                 name={name}
