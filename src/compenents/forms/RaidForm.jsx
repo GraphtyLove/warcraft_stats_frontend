@@ -15,10 +15,12 @@ const RaidForm = ({
     return (
         <div>
             <ClassSelection
-                characterClass={characterClass} setCharacterClass={setCharacterClass} spec={spec} setSpec={setSpec}
+                characterClass={characterClass} setCharacterClass={setCharacterClass}
+                spec={spec} setSpec={setSpec}
             />
             <RaidSelection
-                raid={raid} setRaid={setRaid} boss={boss} setBoss={setBoss}
+                raid={raid} setRaid={setRaid}
+                boss={boss} setBoss={setBoss}
             />
         </div>
     );

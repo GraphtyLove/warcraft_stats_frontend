@@ -1,10 +1,13 @@
 import React from 'react';
 import ClassSelection from "./common/ClassSelection";
 
-const MythicPlusForm = () => {
+const MythicPlusForm = ({characterClass, setCharacterClass, spec, setSpec}) => {
     return (
         <div>
-            <ClassSelection />
+            <ClassSelection
+                characterClass={characterClass} setCharacterClass={setCharacterClass}
+                spec={spec} setSpec={setSpec}
+            />
         </div>
     );
 };

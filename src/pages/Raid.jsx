@@ -16,14 +16,10 @@ const Raid = () => {
         <>
             <div>
                 <RaidForm
-                    raid={raid}
-                    setRaid={setRaid}
-                    boss={boss}
-                    setBoss={setBoss}
-                    characterClass={characterClass}
-                    setCharacterClass={setCharacterClass}
-                    spec={spec}
-                    setSpec={setSpec}
+                    raid={raid} setRaid={setRaid}
+                    boss={boss} setBoss={setBoss}
+                    characterClass={characterClass} setCharacterClass={setCharacterClass}
+                    spec={spec} setSpec={setSpec}
                 />
             </div>
             {leaderboard && <div>
