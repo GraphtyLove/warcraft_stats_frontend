@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import MythicPlusForm from "../compenents/forms/MythicPlusForm";
 import {BACKEND_URL} from "../constants";
-import {fetchApi} from "../utils";
+import MythicPlusLeaderboard from "../compenents/table/mythicPlus/MythicPlusLeaderboard";
 
 const MythicPlus = () => {
     const [leaderboard, setLeaderboard] = useState(null);
@@ -14,7 +14,9 @@ const MythicPlus = () => {
         console.log("Start fetching MM+...")
         setLeaderboardLoading(true)
         try {
-            const response = await fetch(`${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=60`, {
+            const response = await fetch(
+        `${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=60`,
+        {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -22,7 +24,7 @@ const MythicPlus = () => {
                 }
             })
             const responseJson = await response.json()
-            setLeaderboard(responseJson)
+            setLeaderboard(responseJson?.data)
             console.log(responseJson)
         } catch (err) {
             console.error(err)
@@ -30,7 +32,6 @@ const MythicPlus = () => {
             setLeaderboardLoading(false)
             console.log("Done fetching MM+ !")
         }
-
     };
 
     return (
@@ -43,9 +44,8 @@ const MythicPlus = () => {
                 />
             </div>
             {leaderboardLoading && <div>Loading...</div>}
-            {leaderboard?.data && <div>
-                Data loaded!
-                {JSON.stringify(leaderboard)}
+            {leaderboard && <div className="w-full flex justify-center mt-10">
+                <MythicPlusLeaderboard leaderboard={leaderboard} />
             </div>}
         </>
     );

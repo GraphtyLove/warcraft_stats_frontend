@@ -3,14 +3,10 @@ import ClassSelection from "./common/ClassSelection";
 import RaidSelection from "./raid/RaidSelection";
 
 const RaidForm = ({
-                      raid,
-                      setRaid,
-                      boss,
-                      setBoss,
-                      characterClass,
-                      setCharacterClass,
-                      spec,
-                      setSpec,
+                      raid, setRaid,
+                      boss, setBoss,
+                      characterClass, setCharacterClass,
+                      spec, setSpec,
                   }) => {
     return (
         <div>
