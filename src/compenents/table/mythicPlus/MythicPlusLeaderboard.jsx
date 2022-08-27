@@ -14,6 +14,7 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
                 <th>Mastery</th>
                 <th>Crit</th>
                 <th>Poly</th>
+                <th>Profiles</th>
             </tr>
             </thead>
             <tbody>

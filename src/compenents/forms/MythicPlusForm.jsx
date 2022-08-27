@@ -8,7 +8,7 @@ const MythicPlusForm = ({characterClass, setCharacterClass, spec, setSpec, loadL
                 characterClass={characterClass} setCharacterClass={setCharacterClass}
                 spec={spec} setSpec={setSpec}
             />
-            <button onClick={loadLeaderboard}>Search</button>
+            <button className="py-2 px-4 bg-amber-300 mt-5" onClick={loadLeaderboard}>Search</button>
         </div>
     );
 };
