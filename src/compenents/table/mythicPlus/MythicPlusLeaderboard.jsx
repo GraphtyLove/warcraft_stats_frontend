@@ -8,12 +8,13 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
             <tr>
                 <th>Rank</th>
                 <th>Character</th>
-                <th>Score</th>
+                <th>Rio</th>
 
                 <th>Haste</th>
                 <th>Mastery</th>
                 <th>Crit</th>
                 <th>Poly</th>
+
                 <th>Profiles</th>
             </tr>
             </thead>
