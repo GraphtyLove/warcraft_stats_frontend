@@ -8,7 +8,7 @@ It has been developed to facilitate the tedious process of wondering which stats
 
 This repo is only the front-end, you can find the back-end (an API rest made with python: FastApi) in the link bellow.
 
-**[BACK END](https://github.com/GraphtyLove/warcraft_stats_frontend)**
+**[BACK END](https://github.com/GraphtyLove/warcraft_stats_api)**
 
 ## Features
 
