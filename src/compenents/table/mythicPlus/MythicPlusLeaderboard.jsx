@@ -5,21 +5,21 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
     return (
         <table className="table-auto w-3/4">
             <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Character</th>
-                <th>Rio</th>
+                <tr>
+                    <th>Rank</th>
+                    <th>Character</th>
+                    <th>Rio</th>
 
-                <th>Haste</th>
-                <th>Mastery</th>
-                <th>Crit</th>
-                <th>Poly</th>
+                    <th>Haste</th>
+                    <th>Mastery</th>
+                    <th>Crit</th>
+                    <th>Poly</th>
 
-                <th>Profiles</th>
-            </tr>
+                    <th>Profiles</th>
+                </tr>
             </thead>
             <tbody>
-            {leaderboard.map( character => <MythicPlusRow key={character.rank} character={character} /> )}
+                {leaderboard.map(character => <MythicPlusRow key={character.profiles.bnet_armory} character={character} />)}
             </tbody>
         </table>
     );
