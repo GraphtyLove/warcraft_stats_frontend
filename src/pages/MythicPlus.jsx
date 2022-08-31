@@ -1,6 +1,6 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import MythicPlusForm from "../compenents/forms/MythicPlusForm";
-import {BACKEND_URL} from "../constants";
+import { BACKEND_URL } from "../constants";
 import MythicPlusLeaderboard from "../compenents/table/mythicPlus/MythicPlusLeaderboard";
 
 const MythicPlus = () => {
@@ -10,21 +10,21 @@ const MythicPlus = () => {
     const [characterClass, setCharacterClass] = useState("Shaman");
     const [spec, setSpec] = useState("Restoration");
 
-    const loadLeaderboard = async () => {
+    const loadLoadLeaderboard = async () => {
         console.log("Start fetching MM+...")
         setLeaderboardLoading(true)
         try {
             const response = await fetch(
-        `${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=60`,
-        {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "accept": "application/json"
-                }
-            })
+                `${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=20`,
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "accept": "application/json"
+                    }
+                })
             const responseJson = await response.json()
-            setLeaderboard(responseJson?.data)
+            setLeaderboard(responseJson)
             console.log(responseJson)
         } catch (err) {
             console.error(err)
@@ -40,11 +40,11 @@ const MythicPlus = () => {
                 <MythicPlusForm
                     characterClass={characterClass} setCharacterClass={setCharacterClass}
                     spec={spec} setSpec={setSpec}
-                    loadLeaderboard={loadLeaderboard}
+                    loadLoadLeaderboard={loadLoadLeaderboard}
                 />
             </div>
             {leaderboardLoading && <div>Loading...</div>}
-            {leaderboard && <div className="w-full flex justify-center mt-10">
+            {leaderboard?.data && <div className="w-full flex justify-center mt-10">
                 <MythicPlusLeaderboard leaderboard={leaderboard} />
             </div>}
         </>

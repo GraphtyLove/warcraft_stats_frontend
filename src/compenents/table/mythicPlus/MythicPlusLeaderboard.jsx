@@ -19,7 +19,7 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
                 </tr>
             </thead>
             <tbody>
-                {leaderboard.map(character => <MythicPlusRow key={character.profiles.bnet_armory} character={character} />)}
+                {leaderboard?.data?.map(character => <MythicPlusRow key={character.rank} character={character} />)}
             </tbody>
         </table>
     );
