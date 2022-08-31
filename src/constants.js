@@ -1,4 +1,4 @@
-export const BACKEND_URL = "https://warcraft-stats-api.graphtylove.xyz/"
+export const BACKEND_URL = "https://warcraft-stats-api.graphtylove.xyz"
 
 export const CLASSES_AND_SPECS = {
     "DeathKnight": [
