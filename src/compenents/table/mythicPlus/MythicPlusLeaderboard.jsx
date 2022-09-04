@@ -1,7 +1,7 @@
 import React from 'react';
 import MythicPlusRow from "./MythicPlusRow";
 
-const MythicPlusLeaderboard = ({ leaderboard }) => {
+const MythicPlusLeaderboard = ({ leaderboard, characterClass }) => {
     return (
         <table className="table-auto w-3/4">
             <thead>
@@ -19,7 +19,7 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
                 </tr>
             </thead>
             <tbody>
-                {leaderboard?.data?.map(character => <MythicPlusRow key={character.rank} character={character} />)}
+                {leaderboard?.data?.map(character => <MythicPlusRow key={character.rank} character={character} characterClass={characterClass} />)}
             </tbody>
         </table>
     );

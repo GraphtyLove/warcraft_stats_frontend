@@ -15,6 +15,16 @@ body {
     height: 20px;
 }
 
+.class-icon-wrapper {
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.class-icon {
+    transform:scale(1.25);
+}
+
 /* STATS COLORS */
 .haste {
     color: #0ed59b

@@ -1,12 +1,19 @@
 import React from 'react';
 
-const MythicPlusRow = ({ character }) => {
+const MythicPlusRow = ({ character, characterClass }) => {
     return (
         <tr className="even:bg-gray-100">
             <td className="font-bold">{character.rank}</td>
             <td className="flex items-center">
                 <div className="mr-3">
-                    <img className="covenant-icon" src={character.covenant_icon_url} />
+                    <img className="covenant-icon" alt={character.covenant} src={character.covenant_icon_url} />
+                    <div className="class-icon-wrapper mt-0.5">
+                        <img
+                            className="class-icon"
+                            src={`https://raw.githubusercontent.com/orourkek/Wow-Icons/master/images/spec/${characterClass.toLocaleLowerCase()}/${character.spec?.toLocaleLowerCase()}.png`}
+                            alt={characterClass}
+                        />
+                    </div>
                 </div>
                 <div className="flex flex-col items-start">
                     <div className="font-bold">{character.name}</div>
