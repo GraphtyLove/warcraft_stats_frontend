@@ -14,14 +14,15 @@ const ClassSelection = ({characterClass, setCharacterClass, spec, setSpec}) => {
     }, []);
 
     const specList = useMemo(() => {
-        console.log("Compute Spec list")
-        return CLASSES_AND_SPECS[characterClass]
-    }, [characterClass]);
+        const specListTemp = CLASSES_AND_SPECS[characterClass]
+        characterClass && setSpec(specListTemp[0])
+        return specListTemp
+    }, [characterClass, setSpec]);
 
     return (
         <div className="flex w-full justify-center">
-            <SelectionInput name="Class" options={classList}  value={characterClass} setter={setCharacterClass} />
-            <SelectionInput name="Spec" options={specList}  value={spec} setter={setSpec} />
+            <SelectionInput name="Class" options={classList} value={characterClass} setter={setCharacterClass} />
+            <SelectionInput name="Spec"  options={specList}  value={spec}           setter={setSpec} />
         </div>
     );
 };
