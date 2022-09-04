@@ -39,7 +39,10 @@ function App() {
         </main>
 
         <footer className="font-light mt-auto py-3">
-          <i>Developed with ❤️ by GraphtyLove</i>
+          <i>
+              Open source <a className="underline" href="https://github.com/GraphtyLove/warcraft_stats_frontend">code</a>
+              &nbsp; developed with ❤️ by <a className="underline" href="https://github.com/GraphtyLove">GraphtyLove</a>
+          </i>
         </footer>
 
     </div>
