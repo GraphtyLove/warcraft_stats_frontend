@@ -45,7 +45,7 @@ const MythicPlus = () => {
             </div>
             {leaderboardLoading && <div>Loading...</div>}
             {leaderboard?.data && <div className="w-full flex justify-center mt-10">
-                <MythicPlusLeaderboard leaderboard={leaderboard} />
+                <MythicPlusLeaderboard leaderboard={leaderboard} characterClass={characterClass}/>
             </div>}
         </>
     );
