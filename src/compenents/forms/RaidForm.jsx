@@ -18,6 +18,7 @@ const RaidForm = ({
                 raid={raid} setRaid={setRaid}
                 boss={boss} setBoss={setBoss}
             />
+            <h2 className='text-xl font-bold mt-20'>Raid is still under development, please be patient...</h2>
         </div>
     );
 };

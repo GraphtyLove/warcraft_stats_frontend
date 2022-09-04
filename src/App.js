@@ -5,7 +5,7 @@ import MythicPlus from "./pages/MythicPlus";
 
 function App() {
 
-    const [instanceType, setInstanceType] = useState("raid");
+    const [instanceType, setInstanceType] = useState("mm+");
 
     return (
     <div className="App flex flex-col">
@@ -15,9 +15,21 @@ function App() {
 
         <main className="my-10">
             <nav className="w-full flex justify-center mb-10">
-                <ul className="w-50 bg-amber-300 rounded-full flex justify-center border-2 border-amber-200">
-                    <li onClick={() => setInstanceType("raid")} className="cursor-pointer px-5 text-2xl border-amber-200 border-r-2">Raid</li>
-                    <li onClick={() => setInstanceType("mm+")} className="cursor-pointer px-5 text-2xl">Mythic +</li>
+                <ul className="w-50 bg-amber-300 rounded-md flex justify-center border-4 border-amber-300">
+                    <li
+                        style={instanceType === 'raid' ? {background: '#fff' } : {}}
+                        onClick={() => setInstanceType("raid")}
+                        className="cursor-pointer px-5 text-2xl border-amber-200 border-r-2"
+                    >
+                        Raid
+                    </li>
+                    <li
+                        style={instanceType === 'mm+' ? {background: '#fff' } : {}}
+                        onClick={() => setInstanceType("mm+")}
+                        className="cursor-pointer px-5 text-2xl"
+                    >
+                        Mythic +
+                    </li>
                 </ul>
             </nav>
 
