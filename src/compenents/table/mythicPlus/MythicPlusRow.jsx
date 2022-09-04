@@ -2,7 +2,7 @@ import React from 'react';
 
 const MythicPlusRow = ({ character }) => {
     return (
-        <tr>
+        <tr className="even:bg-gray-100">
             <td className="font-bold">{character.rank}</td>
             <td className="flex items-center">
                 <div className="mr-3">
@@ -16,9 +16,37 @@ const MythicPlusRow = ({ character }) => {
 
             </td>
             <td style={{ color: character.score_color }}>{character.score}</td>
-            <td className="font-bold haste">{character.stats?.haste.percentage}%</td>
-            <td className="font-bold mastery">{character.stats?.mastery.percentage}%</td>
-            <td className="font-bold crit">{character.stats?.crit.percentage}%</td>
+            <td className="haste">
+                <div className="flex flex-col">
+                    <div className="font-bold">
+                        {character.stats?.haste.percentage}%
+                    </div>
+                    <div>
+                        {character.stats?.haste.value}
+                    </div>
+                </div>
+            </td>
+            <td className="mastery">
+                <div className="flex flex-col">
+                    <div className="font-bold">
+                        {character.stats?.mastery.percentage}%
+                    </div>
+                    <div>
+                        {character.stats?.mastery.value}
+                    </div>
+                </div>
+            </td>
+            <td className="crit">
+                <div className="flex flex-col">
+                    <div className="font-bold">
+                        {character.stats?.crit.percentage}%
+                    </div>
+                    <div>
+                        {character.stats?.crit.value}
+                    </div>
+                </div>
+
+            </td>
             <td className="font-bold versa">{character.stats?.versatility.value}</td>
             <td className="flex justify-center">
                 <a href={character.profiles.bnet_armory}>

@@ -5,7 +5,7 @@ const MythicPlusLeaderboard = ({ leaderboard }) => {
     return (
         <table className="table-auto w-3/4">
             <thead>
-                <tr>
+                <tr className="text-xl">
                     <th>Rank</th>
                     <th>Character</th>
                     <th>Rio</th>
