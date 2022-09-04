@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MythicPlusForm from "../compenents/forms/MythicPlusForm";
 import { BACKEND_URL } from "../constants";
 import MythicPlusLeaderboard from "../compenents/table/mythicPlus/MythicPlusLeaderboard";
+import Spinner from "../compenents/loaders/Spinner";
 
 const MythicPlus = () => {
     const [leaderboard, setLeaderboard] = useState(null);
@@ -43,7 +44,7 @@ const MythicPlus = () => {
                     loadLoadLeaderboard={loadLoadLeaderboard}
                 />
             </div>
-            {leaderboardLoading && <div>Loading...</div>}
+            {leaderboardLoading && <Spinner />}
             {leaderboard?.data && <div className="w-full flex justify-center mt-10">
                 <MythicPlusLeaderboard leaderboard={leaderboard} characterClass={characterClass}/>
             </div>}
