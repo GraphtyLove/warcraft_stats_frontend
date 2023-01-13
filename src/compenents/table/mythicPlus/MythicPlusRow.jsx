@@ -6,7 +6,6 @@ const MythicPlusRow = ({ character, characterClass }) => {
             <td className="font-bold">{character.rank}</td>
             <td className="flex items-center">
                 <div className="mr-3">
-                    <img className="covenant-icon" alt={character.covenant} src={character.covenant_icon_url} />
                     <div className="class-icon-wrapper mt-0.5">
                         <img
                             className="class-icon"
@@ -57,10 +56,10 @@ const MythicPlusRow = ({ character, characterClass }) => {
             <td className="font-bold versa">{character.stats?.versatility.value}</td>
             <td className="flex justify-center">
                 <a href={character.profiles.bnet_armory}>
-                    <img className="covenant-icon mr-1" src="https://cdnassets.raider.io/assets/img/wow-icon-a718385c1d75ca9edbb3eed0a5546c30.png" alt="Wow armory" />
-                </a>
+                    <img className="profile-icon mr-1" src="https://cdnassets.raider.io/assets/img/wow-icon-a718385c1d75ca9edbb3eed0a5546c30.png" alt="Wow armory" />
+                </a>-
                 <a href={character.profiles.raider_io}>
-                    <img className="covenant-icon" src="https://cdnassets.raider.io/images/brand/Icon_FullColor.png" alt="RaiderIo" />
+                    <img className="profile-icon" src="https://cdnassets.raider.io/images/brand/Icon_FullColor.png" alt="RaiderIo" />
                 </a>
             </td>
         </tr>
