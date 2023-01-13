@@ -17,7 +17,7 @@ In raid mode, you can select a specific boss.
 
 You can specify which class/spec you want to target.
 
-**⚠️ There is no guarantee that the character will be wearing his raid/mm+ stuff at the time we check. It could also be that the character is in another spec at the inspection time. ⚠️**
+**⚠️ There is no guarantee that the character will be wearing his raid/mm+ stuff at the time we check. It could also be that the character is in another spec at the inspection time (in which case they are hiddens. Which explains why some numbers are missing in the ranking). ⚠️**
 
 ## Stack
 
