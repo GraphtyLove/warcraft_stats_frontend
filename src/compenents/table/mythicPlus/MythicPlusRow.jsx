@@ -9,7 +9,7 @@ const MythicPlusRow = ({ character, characterClass }) => {
                     <div className="class-icon-wrapper mt-0.5">
                         <img
                             className="class-icon"
-                            src={`https://raw.githubusercontent.com/orourkek/Wow-Icons/master/images/spec/${characterClass.toLocaleLowerCase()}/${character.spec?.toLocaleLowerCase()}.png`}
+                            src={`/wow_icons/spec/${characterClass.toLocaleLowerCase()}_${character.spec?.toLocaleLowerCase()}.jpg`}
                             alt={characterClass}
                         />
                     </div>
@@ -57,7 +57,7 @@ const MythicPlusRow = ({ character, characterClass }) => {
             <td className="flex justify-center">
                 <a href={character.profiles.bnet_armory}>
                     <img className="profile-icon mr-1" src="https://cdnassets.raider.io/assets/img/wow-icon-a718385c1d75ca9edbb3eed0a5546c30.png" alt="Wow armory" />
-                </a>-
+                </a>
                 <a href={character.profiles.raider_io}>
                     <img className="profile-icon" src="https://cdnassets.raider.io/images/brand/Icon_FullColor.png" alt="RaiderIo" />
                 </a>

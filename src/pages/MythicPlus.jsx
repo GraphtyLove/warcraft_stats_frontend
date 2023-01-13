@@ -3,20 +3,21 @@ import MythicPlusForm from "../compenents/forms/MythicPlusForm";
 import { BACKEND_URL } from "../constants";
 import MythicPlusLeaderboard from "../compenents/table/mythicPlus/MythicPlusLeaderboard";
 import Spinner from "../compenents/loaders/Spinner";
+import { useEffect } from 'react';
 
 const MythicPlus = () => {
     const [leaderboard, setLeaderboard] = useState(null);
     const [leaderboardLoading, setLeaderboardLoading] = useState(false);
 
     const [characterClass, setCharacterClass] = useState("Shaman");
-    const [spec, setSpec] = useState("Restoration");
+    const [characterSpec, setCharacterSpec] = useState("Restoration");
 
     const loadLoadLeaderboard = async () => {
         console.log("Start fetching MM+...")
         setLeaderboardLoading(true)
         try {
             const response = await fetch(
-                `${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${spec}&region=world&season=season-sl-4&max_characters=20`,
+                `${BACKEND_URL}/mythic-plus?class_name=${characterClass}&spec_name=${characterSpec}&region=world&season=season-df-1&max_characters=20`,
                 {
                     method: "GET",
                     headers: {
@@ -35,18 +36,23 @@ const MythicPlus = () => {
         }
     };
 
+    // Set leaderboard to null when characterClass or spec changes
+    useEffect(() => {
+        setLeaderboard(null)
+    }, [characterClass, characterSpec])
+
     return (
         <>
             <div>
                 <MythicPlusForm
                     characterClass={characterClass} setCharacterClass={setCharacterClass}
-                    spec={spec} setSpec={setSpec}
+                    characterSpec={characterSpec} setCharacterSpec={setCharacterSpec}
                     loadLoadLeaderboard={loadLoadLeaderboard}
                 />
             </div>
             {leaderboardLoading && <Spinner />}
             {leaderboard?.data && <div className="w-full flex justify-center mt-10">
-                <MythicPlusLeaderboard leaderboard={leaderboard} characterClass={characterClass}/>
+                <MythicPlusLeaderboard leaderboard={leaderboard} characterClass={characterClass} characterSpec={characterSpec} />
             </div>}
         </>
     );

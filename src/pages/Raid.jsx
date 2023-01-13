@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import RaidForm from "../compenents/forms/RaidForm";
-import useFetch from "react-fetch-hook";
 
 
 const Raid = () => {
     const [leaderboard, setLeaderboard] = useState(null);
 
-    const [characterClass, setCharacterClass] = useState("Shaman");
-    const [spec, setSpec] = useState("Restoration");
-    const [raid, setRaid] = useState("Sanctum Of Domination");
-    const [boss, setBoss] = useState("The Tarragrue");
+    const [characterClass, setCharacterClass] = useState("Evoker");
+    const [spec, setSpec] = useState("Preservation");
+    const [raid, setRaid] = useState("Vault of the Incarnates");
+    const [boss, setBoss] = useState("Eranog");
 
 
     return (

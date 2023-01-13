@@ -1,8 +1,8 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 import SelectionInput from "../inputs/SelectionInput";
 import {CLASSES_AND_SPECS} from "../../../constants";
 
-const ClassSelection = ({characterClass, setCharacterClass, spec, setSpec}) => {
+const ClassSelection = ({characterClass, setCharacterClass, characterSpec, setCharacterSpec}) => {
 
     const classList = useMemo(() => {
         console.log("Compute class list")
@@ -15,14 +15,14 @@ const ClassSelection = ({characterClass, setCharacterClass, spec, setSpec}) => {
 
     const specList = useMemo(() => {
         const specListTemp = CLASSES_AND_SPECS[characterClass]
-        characterClass && setSpec(specListTemp[0])
+        characterClass && setCharacterSpec(specListTemp[0])
         return specListTemp
-    }, [characterClass, setSpec]);
+    }, [characterClass, setCharacterSpec]);
 
     return (
         <div className="flex w-full justify-center">
             <SelectionInput name="Class" options={classList} value={characterClass} setter={setCharacterClass} />
-            <SelectionInput name="Spec"  options={specList}  value={spec}           setter={setSpec} />
+            <SelectionInput name="Spec"  options={specList}  value={characterSpec}  setter={setCharacterSpec} />
         </div>
     );
 };
