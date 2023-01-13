@@ -1,4 +1,4 @@
-export const BACKEND_URL = "http://localhost:8000"
+export const BACKEND_URL = process.env.NODE_ENV === "production" ? "https://warcraft-stats-api.graphtylove.xyz" : "http://localhost:8000";
 
 export const CLASSES_AND_SPECS = {
     "DeathKnight": [
